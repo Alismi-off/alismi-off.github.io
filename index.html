@@ -78,6 +78,37 @@
       color: var(--text);
       line-height: 1.6;
       font-weight: 300;
+      overflow-x: hidden;
+    }
+
+    /* Background Steady / Animated Logo Watermark */
+    .bg-logo-container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 55vw;
+      max-width: 550px;
+      height: 55vh;
+      max-height: 550px;
+      z-index: 0;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.08; /* Low opacity to keep text readable */
+      animation: logoBreath 10s ease-in-out infinite alternate;
+    }
+
+    .bg-logo-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @keyframes logoBreath {
+      0% { transform: translate(-50%, -50%) scale(1); }
+      100% { transform: translate(-50%, -50%) scale(1.06); }
     }
 
     a {
@@ -93,6 +124,8 @@
 
     /* Layout */
     .page {
+      position: relative;
+      z-index: 1; /* Ensures page content sits above background logo */
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -609,22 +642,17 @@
       color: var(--text);
     }
 
-    /* --- ADDED FIXES --- */
-
-    /* Fix image cropping */
+    /* Image cropping & icon display fixes */
     .hero-image img,
     .press-item img,
     .gallery-item img {
       object-fit: contain !important;
-      background-color: #0b0b0d; /* Fills empty background space cleanly */
+      background-color: #0b0b0d;
     }
 
-    /* Hide all social/platform icons inside buttons */
     .platform-btn img.icon {
       display: none !important;
     }
-
-    /* ------------------- */
 
     /* Responsive */
     @media (max-width: 900px) {
@@ -683,6 +711,12 @@
   </style>
 </head>
 <body>
+
+<!-- Background Steady & Animated Logo Watermark -->
+<div class="bg-logo-container">
+  <img src="https://alismi-off.github.io/Logo%20presentation%20(2).png" alt="">
+</div>
+
 <div class="page">
 
   <!-- NAVIGATION -->
@@ -765,21 +799,21 @@
           </div>
         </div>
 
-      <!-- Apple Music (LOCKIN) -->
-      <div class="music-card">
-        <div class="music-title">LOCKIN — Single</div>
-        <div class="music-meta">Apple Music • ALISMI</div>
-        <div class="music-embed">
-          <iframe
-            allow="autoplay *; encrypted-media *; fullscreen *"
-            frameborder="0"
-            height="200"
-            style="width:100%;max-width:100%;overflow:hidden;border-radius:10px;"
-            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation"
-            src="https://embed.music.apple.com/us/song/lockin/6793278437">
-          </iframe>
+        <!-- Apple Music (LOCKIN) -->
+        <div class="music-card">
+          <div class="music-title">LOCKIN — Single</div>
+          <div class="music-meta">Apple Music • ALISMI</div>
+          <div class="music-embed">
+            <iframe
+              allow="autoplay *; encrypted-media *; fullscreen *"
+              frameborder="0"
+              height="200"
+              style="width:100%;max-width:100%;overflow:hidden;border-radius:10px;"
+              sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation"
+              src="https://embed.music.apple.com/us/song/lockin/6793278437">
+            </iframe>
+          </div>
         </div>
-      </div>
 
         <!-- Spotify -->
         <div class="music-card">
