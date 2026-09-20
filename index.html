@@ -5,12 +5,50 @@
   <title>ALISMI | Official Website</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO -->
+  <!-- Primary SEO -->
+  <link rel="canonical" href="https://alismi-off.github.io/" />
   <meta name="description" content="ALISMI – Artist, Producer, Composer, Mixing Engineer, Performer, Actor. Trap, EDM, Afro, R&B, Reggaeton. Official website, music, press kit, gallery and contact." />
   <meta name="keywords" content="ALISMI, Alireza, artist, producer, trap, EDM, afro, R&B, reggaeton, London, UAL, music production, performing arts" />
+  <meta name="author" content="ALISMI" />
+
+  <!-- Open Graph -->
   <meta property="og:title" content="ALISMI | Official Website" />
   <meta property="og:description" content="Multi-genre artist and producer based in London. Explore music, press kit, gallery and contact." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://alismi-off.github.io/" />
+  <meta property="og:image" content="https://alismi-off.github.io/hf_20260414_041359_0d9d6076-cbed-4c28-8130-416cad086152.png" />
+  <meta property="og:image:alt" content="ALISMI — Official portrait" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ALISMI | Official Website" />
+  <meta name="twitter:description" content="Multi-genre artist and producer based in London. Explore music, press kit, gallery and contact." />
+  <meta name="twitter:image" content="https://alismi-off.github.io/hf_20260414_041359_0d9d6076-cbed-4c28-8130-416cad086152.png" />
+
+  <!-- Google Fonts for Premium Presentation -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    "name": "ALISMI",
+    "url": "https://alismi-off.github.io/",
+    "logo": "https://alismi-off.github.io/Logo%20presentation%20(2).png",
+    "sameAs": [
+      "https://www.youtube.com/@alismi.official",
+      "https://www.instagram.com/alismi_official",
+      "https://open.spotify.com/artist/3oPyxUvanM0y4qx7EiRUdH",
+      "https://soundcloud.com/user-314593918",
+      "https://www.tiktok.com/@alismi.official",
+      "https://music.apple.com/gb/artist/alismi/1895603612"
+    ],
+    "description": "ALISMI – Artist, Producer, Composer, Mixing Engineer, Performer, Actor. Trap, EDM, Afro, R&B, Reggaeton. Based in London."
+  }
+  </script>
 
   <style>
     :root {
@@ -23,7 +61,9 @@
       --danger: #ff4b4b;
       --card: #111119;
       --border: #262636;
-      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      /* Modern Font Stack */
+      --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-display: 'Montserrat', system-ui, -apple-system, sans-serif;
     }
 
     * {
@@ -33,15 +73,17 @@
     }
 
     body {
-      font-family: var(--font-main);
+      font-family: var(--font-body);
       background: radial-gradient(circle at top, #181824 0, #050509 55%);
       color: var(--text);
       line-height: 1.6;
+      font-weight: 300;
     }
 
     a {
       color: inherit;
       text-decoration: none;
+      transition: all 0.3s ease;
     }
 
     img {
@@ -61,6 +103,7 @@
       top: 0;
       z-index: 50;
       backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       background: linear-gradient(to bottom, #050509ee, #050509cc);
       border-bottom: 1px solid #111119;
     }
@@ -89,14 +132,15 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.8rem;
-      color: var(--accent);
       background: radial-gradient(circle at top, #f5c15c33, #050509 60%);
+      overflow: hidden;
     }
 
     .nav-title {
+      font-family: var(--font-display);
       font-size: 0.9rem;
-      letter-spacing: 0.18em;
+      font-weight: 700;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--muted);
     }
@@ -104,15 +148,17 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 1.25rem;
-      font-size: 0.85rem;
+      gap: 1.5rem;
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.15em;
     }
 
     .nav-links a {
       position: relative;
-      padding-bottom: 0.15rem;
+      padding-bottom: 0.2rem;
       color: var(--muted);
     }
 
@@ -137,9 +183,12 @@
       border-radius: 999px;
       border: 1px solid var(--border);
       padding: 0.35rem 0.6rem;
-      font-size: 0.8rem;
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 500;
       color: var(--muted);
       background: #050509;
+      cursor: pointer;
     }
 
     main {
@@ -149,7 +198,7 @@
     .section {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 3.5rem 1.25rem;
+      padding: 4.5rem 1.25rem;
     }
 
     .section-header {
@@ -157,28 +206,30 @@
       justify-content: space-between;
       align-items: baseline;
       gap: 1rem;
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
     }
 
     .section-title {
-      font-size: 1.1rem;
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.22em;
-      color: var(--muted);
+      color: var(--text);
     }
 
     .section-subtitle {
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       color: var(--muted);
     }
 
     /* Hero */
     .hero {
-      padding-top: 3.5rem;
-      padding-bottom: 3.5rem;
+      padding-top: 4.5rem;
+      padding-bottom: 4.5rem;
       display: grid;
       grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 2.5rem;
+      gap: 3rem;
       align-items: center;
     }
 
@@ -189,16 +240,21 @@
     }
 
     .hero-tag {
-      font-size: 0.8rem;
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.22em;
       color: var(--muted);
     }
 
     .hero-name {
-      font-size: 2.4rem;
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 800;
       letter-spacing: 0.16em;
       text-transform: uppercase;
+      line-height: 1.1;
     }
 
     .hero-name span {
@@ -207,7 +263,7 @@
 
     .hero-roles,
     .hero-genres {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: var(--muted);
     }
 
@@ -220,42 +276,55 @@
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.75rem;
+      gap: 1rem;
       margin-top: 0.5rem;
     }
 
-    .btn-primary {
-      padding: 0.6rem 1.2rem;
+    .btn-primary, .btn-secondary {
+      font-family: var(--font-display);
+      padding: 0.7rem 1.5rem;
       border-radius: 999px;
-      border: 1px solid var(--accent);
-      background: radial-gradient(circle at top, #f5c15c33, #050509 60%);
-      color: var(--text);
-      font-size: 0.85rem;
+      font-size: 0.8rem;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.16em;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+      border: 1px solid var(--accent);
+      background: radial-gradient(circle at top, #f5c15c33, #050509 60%);
+      color: var(--accent);
+    }
+    
+    .btn-primary:hover {
+      background: var(--accent);
+      color: var(--bg);
+      box-shadow: 0 0 15px var(--accent-soft);
     }
 
     .btn-secondary {
-      padding: 0.6rem 1.2rem;
-      border-radius: 999px;
       border: 1px solid var(--border);
       background: #050509;
       color: var(--muted);
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--text);
+      color: var(--text);
     }
 
     .hero-note {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       color: var(--muted);
       max-width: 420px;
+      line-height: 1.7;
     }
 
     .hero-right {
       border-radius: 18px;
       border: 1px solid var(--border);
-      background: radial-gradient(circle at top, #f5c15c11, #050509 65%);
+      background: radial-gradient(circle at top, #f5c15c0a, #050509 65%);
       padding: 1.25rem;
       display: flex;
       flex-direction: column;
@@ -267,23 +336,21 @@
       overflow: hidden;
       border: 1px solid #1c1c28;
       background: #111119;
-      height: 280px;
+      height: 320px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--muted);
-      font-size: 0.8rem;
-      text-align: center;
-      padding: 1rem;
     }
 
     .hero-meta {
-      font-size: 0.8rem;
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
       color: var(--muted);
       display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
+      justify-content: center;
+      text-transform: uppercase;
     }
 
     /* Music section */
@@ -297,15 +364,24 @@
       border-radius: 16px;
       border: 1px solid var(--border);
       background: var(--card);
-      padding: 1rem;
+      padding: 1.25rem;
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
+      gap: 1rem;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .music-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-soft);
     }
 
     .music-title {
+      font-family: var(--font-display);
       font-size: 0.9rem;
-      font-weight: 500;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 0.05em;
     }
 
     .music-meta {
@@ -330,7 +406,7 @@
     .grid-gallery {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 1rem;
+      gap: 1.25rem;
     }
 
     .press-item,
@@ -338,173 +414,230 @@
       border-radius: 14px;
       border: 1px solid var(--border);
       background: #111119;
-      height: 180px;
+      height: 200px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.8rem;
-      color: var(--muted);
-      text-align: center;
-      padding: 0.75rem;
+      overflow: hidden;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .press-item:hover, .gallery-item:hover {
+      transform: translateY(-5px) scale(1.02);
+      border-color: var(--accent-soft);
+    }
+
+    .press-item img,
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 12px;
+      transition: transform 0.5s ease;
+    }
+
+    .press-item:hover img, .gallery-item:hover img {
+      transform: scale(1.05);
     }
 
     .press-footer {
-      margin-top: 1rem;
-      font-size: 0.8rem;
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
       color: var(--muted);
       display: flex;
       justify-content: space-between;
+      align-items: center;
       flex-wrap: wrap;
-      gap: 0.75rem;
+      gap: 1rem;
     }
 
     .press-download {
-      padding: 0.4rem 0.9rem;
+      font-family: var(--font-display);
+      padding: 0.6rem 1.2rem;
       border-radius: 999px;
       border: 1px solid var(--border);
-      font-size: 0.8rem;
-      color: var(--muted);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text);
+    }
+
+    .press-download:hover {
+      background: var(--text);
+      color: var(--bg);
     }
 
     /* Bio */
     .bio-layout {
       display: grid;
       grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-      gap: 2rem;
+      gap: 3rem;
     }
 
     .bio-text {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: var(--muted);
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 1.25rem;
+      line-height: 1.8;
     }
 
     .bio-text p span {
       color: var(--accent);
+      font-weight: 500;
     }
 
     .bio-side {
       border-radius: 16px;
       border: 1px solid var(--border);
       background: var(--card);
-      padding: 1rem;
-      font-size: 0.8rem;
+      padding: 1.5rem;
+      font-size: 0.85rem;
       color: var(--muted);
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
+      gap: 1rem;
+      height: fit-content;
     }
 
     .bio-tag {
-      font-size: 0.8rem;
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: var(--muted);
+      letter-spacing: 0.2em;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.75rem;
     }
 
     .bio-highlight {
       font-size: 0.9rem;
       color: var(--text);
+      font-weight: 500;
+    }
+
+    .bio-side strong {
+      color: var(--accent);
+      font-weight: 500;
     }
 
     /* Platform buttons */
     .platforms {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 0.75rem;
+      gap: 1rem;
     }
 
     .platform-btn {
       border-radius: 999px;
       border: 1px solid var(--border);
       background: #050509;
-      padding: 0.6rem 0.9rem;
+      padding: 0.75rem 1rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0.4rem;
-      font-size: 0.8rem;
+      gap: 0.5rem;
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 600;
       color: var(--muted);
       text-transform: uppercase;
       letter-spacing: 0.12em;
     }
 
-    .platform-btn span.icon {
-      width: 18px;
-      height: 18px;
+    .platform-btn img.icon {
+      width: 20px;
+      height: 20px;
       border-radius: 999px;
       border: 1px solid var(--accent-soft);
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.7rem;
-      color: var(--accent);
+      object-fit: cover;
+      transition: all 0.3s ease;
     }
 
     .platform-btn:hover {
       border-color: var(--accent);
       color: var(--text);
-      background: radial-gradient(circle at top, #f5c15c22, #050509 70%);
+      background: radial-gradient(circle at top, #f5c15c15, #050509 70%);
+      transform: translateY(-2px);
+    }
+    
+    .platform-btn:hover img.icon {
+      border-color: var(--accent);
     }
 
     /* Contact / footer */
     .contact-layout {
       display: grid;
       grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 1.5rem;
+      gap: 2.5rem;
     }
 
     .contact-text {
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       color: var(--muted);
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
+      gap: 1rem;
+      line-height: 1.7;
     }
 
     .contact-email {
-      font-size: 0.9rem;
+      font-size: 1rem;
+    }
+    
+    .contact-email a {
       color: var(--accent);
+      font-weight: 500;
+    }
+    
+    .contact-email a:hover {
+      text-decoration: underline;
     }
 
     footer {
       border-top: 1px solid #111119;
-      padding: 1.5rem 1.25rem 2rem;
-      font-size: 0.75rem;
+      padding: 2rem 1.25rem;
+      font-size: 0.8rem;
       color: var(--muted);
       text-align: center;
+      background: #050509;
     }
 
     footer span.brand {
-      letter-spacing: 0.18em;
+      font-family: var(--font-display);
+      font-weight: 700;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
+      color: var(--text);
     }
 
     /* Responsive */
     @media (max-width: 900px) {
       .hero {
         grid-template-columns: minmax(0, 1fr);
+        gap: 2rem;
       }
-
       .music-grid {
         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       }
-
       .grid-press,
       .grid-gallery {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
-
       .bio-layout {
         grid-template-columns: minmax(0, 1fr);
       }
-
       .platforms {
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
-
       .contact-layout {
         grid-template-columns: minmax(0, 1fr);
       }
@@ -514,30 +647,28 @@
       .nav-links {
         display: none;
       }
-
       .nav-toggle {
         display: inline-flex;
         align-items: center;
         gap: 0.3rem;
       }
-
       .section {
-        padding: 2.5rem 1.25rem;
+        padding: 3rem 1.25rem;
       }
-
       .hero-name {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
-
+      .section-header {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
       .music-grid {
         grid-template-columns: minmax(0, 1fr);
       }
-
       .grid-press,
       .grid-gallery {
         grid-template-columns: minmax(0, 1fr);
       }
-
       .platforms {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -551,7 +682,9 @@
   <header>
     <nav class="nav">
       <div class="nav-left">
-        <div class="logo-mark">A</div>
+        <div class="logo-mark">
+          <img src="https://alismi-off.github.io/Logo%20presentation%20(2).png" alt="ALISMI logo" style="width:28px;height:28px;object-fit:cover;">
+        </div>
         <div class="nav-title">ALISMI • LONDON</div>
       </div>
       <div class="nav-links" id="navLinks">
@@ -595,15 +728,10 @@
 
       <div class="hero-right">
         <div class="hero-image">
-          <!-- Background / hero image placeholder -->
-          BACKGROUND PORTRAIT  
-          <br /><br />
-          This area is reserved for your main background photo (silver jacket, LV beanie).  
-          In production, this will be replaced with the actual image file.
+          <img src="https://alismi-off.github.io/hf_20260414_041359_0d9d6076-cbed-4c28-8130-416cad086152.png" alt="ALISMI hero portrait" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
         </div>
         <div class="hero-meta">
           <span>Location: London, United Kingdom</span>
-          <span>Education: UAL • Music Production &amp; Performing Arts • Media Studies</span>
         </div>
       </div>
     </section>
@@ -632,20 +760,20 @@
         </div>
 
       <!-- Apple Music (LOCKIN) -->
-<div class="music-card">
-  <div class="music-title">LOCKIN — Single</div>
-  <div class="music-meta">Apple Music • ALISMI</div>
-  <div class="music-embed">
-    <iframe
-      allow="autoplay *; encrypted-media *; fullscreen *"
-      frameborder="0"
-      height="200"
-      style="width:100%;max-width:100%;overflow:hidden;border-radius:10px;"
-      sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation"
-      src="https://embed.music.apple.com/us/song/lockin/6793278437">
-    </iframe>
-  </div>
-</div>
+      <div class="music-card">
+        <div class="music-title">LOCKIN — Single</div>
+        <div class="music-meta">Apple Music • ALISMI</div>
+        <div class="music-embed">
+          <iframe
+            allow="autoplay *; encrypted-media *; fullscreen *"
+            frameborder="0"
+            height="200"
+            style="width:100%;max-width:100%;overflow:hidden;border-radius:10px;"
+            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation"
+            src="https://embed.music.apple.com/us/song/lockin/6793278437">
+          </iframe>
+        </div>
+      </div>
 
         <!-- Spotify -->
         <div class="music-card">
@@ -671,30 +799,22 @@
 
       <div class="grid-press">
         <div class="press-item">
-          PRESS PORTRAIT #1  
-          <br /><br />
-          (Black hoodie + sunglasses)
+          <img src="https://alismi-off.github.io/hf_20260414_103733_6fec13f8-8236-4677-ba1d-836eab6d3fe8.png" alt="Press portrait 1">
         </div>
         <div class="press-item">
-          PRESS PORTRAIT #2  
-          <br /><br />
-          (Blue shirt + sunglasses)
+          <img src="https://alismi-off.github.io/hf_20260414_104026_f12da5a6-b516-48ba-a39d-cbe450cfe405.png" alt="Press portrait 2">
         </div>
         <div class="press-item">
-          BRAND JEWELLERY  
-          <br /><br />
-          (ALISMI chain)
+          <img src="https://alismi-off.github.io/hf_20260419_224127_822243af-e769-44cf-ba40-058696b8662d.png" alt="Brand jewellery">
         </div>
         <div class="press-item">
-          PRESS PORTRAIT #3  
-          <br /><br />
-          (Nike white/red shirt)
+          <img src="https://alismi-off.github.io/hf_20260419_231533_040a359f-170e-4960-b192-09cbd516c3c1.png" alt="Press portrait 3">
         </div>
       </div>
 
       <div class="press-footer">
         <span>High‑resolution files available on request for press, bookings and editorial use.</span>
-        <a href="mailto:Aliismii.963@gmail.com" class="press-download">Request full press kit</a>
+        <a href="mailto:alismi.963@gmail.com" class="press-download">Request full press kit</a>
       </div>
     </section>
 
@@ -707,24 +827,16 @@
 
       <div class="grid-gallery">
         <div class="gallery-item">
-          LIVE PERFORMANCE #1  
-          <br /><br />
-          (Blue stage lights, screen visuals)
+          <img src="https://alismi-off.github.io/hf_20260419_174938_47e3b1e1-5216-4cbb-aaaf-59680d88d748.png" alt="Live performance 1">
         </div>
         <div class="gallery-item">
-          LIVE PERFORMANCE #2  
-          <br /><br />
-          (Mic + bandana)
+          <img src="https://alismi-off.github.io/hf_20260419_175249_4f298f4a-767a-452d-92be-387d4ffd096d.png" alt="Live performance 2">
         </div>
         <div class="gallery-item">
-          CELLO PERFORMANCE #1  
-          <br /><br />
-          (Standing)
+          <img src="https://alismi-off.github.io/hf_20260613_010011_9617c0d7-79d8-42f6-b7da-b080c3cd5699.png" alt="Cello performance 1">
         </div>
         <div class="gallery-item">
-          CELLO PERFORMANCE #2  
-          <br /><br />
-          (Seated)
+          <img src="https://alismi-off.github.io/hf_20260613_010759_d48881d7-4eaa-4fd9-8f41-9a15c6f65f09.png" alt="Cello performance 2">
         </div>
       </div>
     </section>
@@ -767,11 +879,10 @@
         <aside class="bio-side">
           <div class="bio-tag">Profile Snapshot</div>
           <div class="bio-highlight">Artist • Producer • Composer • Mixing Engineer • Performer • Actor</div>
-          <div>Base: London, United Kingdom</div>
-<div>Education: UAL — Music Production & Performance (Diploma) • Music Performance (HNC) • Architecture (HNC) • UAL - Media & Technology (Current)</div>
-
-          <div>Genres: HipHop, EDM, Afro, R&amp;B, Reggaeton</div>
-          <div>Working hours: Up to 15 hours a day dedicated to creation.</div>
+          <div><strong>Base:</strong> London, United Kingdom</div>
+          <div><strong>Education:</strong> UAL — Music Production & Performance (Diploma) • Music Performance (HNC) • Architecture (HNC) • UAL - Media & Technology (Current)</div>
+          <div><strong>Genres:</strong> HipHop, EDM, Afro, R&amp;B, Reggaeton</div>
+          <div><strong>Working hours:</strong> Up to 15 hours a day dedicated to creation.</div>
         </aside>
       </div>
     </section>
@@ -787,28 +898,28 @@
         <div>
           <div class="platforms">
             <a class="platform-btn" href="https://www.youtube.com/@alismi.official" target="_blank" rel="noopener">
-              <span class="icon">YT</span> YouTube
+              <img class="icon" src="https://alismi-off.github.io/yt_icon_red_digital.png" alt="YouTube"> YouTube
             </a>
             <a class="platform-btn" href="https://www.instagram.com/alismi_official" target="_blank" rel="noopener">
-              <span class="icon">IG</span> Instagram
+              <img class="icon" src="https://alismi-off.github.io/Instagram_Glyph_Gradient.png" alt="Instagram"> Instagram
             </a>
             <a class="platform-btn" href="https://open.spotify.com/artist/3oPyxUvanM0y4qx7EiRUdH?si=G3BFBscWSauDnWCKJwy94w&nd=1&dlsi=b29041e057e649f4" target="_blank" rel="noopener">
-              <span class="icon">SP</span> Spotify
+              <img class="icon" src="https://alismi-off.github.io/Spotify_Primary_Logo_RGB_Green.png" alt="Spotify"> Spotify
             </a>
             <a class="platform-btn" href="https://soundcloud.com/user-314593918?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener">
-              <span class="icon">SC</span> SoundCloud
+              <img class="icon" src="https://alismi-off.github.io/soundcloud.svg" alt="SoundCloud"> SoundCloud
             </a>
             <a class="platform-btn" href="https://www.tiktok.com/@alismi.official?_r=1&_t=ZN-95gIZXpIxOQ" target="_blank" rel="noopener">
-              <span class="icon">TT</span> TikTok
+              <img class="icon" src="https://alismi-off.github.io/tiktok.svg" alt="TikTok"> TikTok
             </a>
             <a class="platform-btn" href="https://music.apple.com/gb/artist/alismi/1895603612" target="_blank" rel="noopener">
-              <span class="icon">AM</span> Apple Music
+              <img class="icon" src="https://alismi-off.github.io/applemusic.svg" alt="Apple Music"> Apple Music
             </a>
-            <a class="platform-btn" href="mailto:Aliismii.963@gmail.com">
-              <span class="icon">@</span> Email
+            <a class="platform-btn" href="mailto:alismi.963@gmail.com">
+              <img class="icon" src="https://alismi-off.github.io/Instagram_Glyph_Gradient.png" alt="Email"> Email
             </a>
             <a class="platform-btn" href="#presskit">
-              <span class="icon">PK</span> Press Kit
+              <img class="icon" src="https://alismi-off.github.io/Logo%20presentation%20(2).png" alt="Press Kit"> Press Kit
             </a>
           </div>
         </div>
@@ -818,7 +929,7 @@
             For bookings, collaborations, sync, press and performance enquiries, please reach out via email or social platforms.
           </p>
           <p class="contact-email">
-            Email: <a href="mailto:Aliismii.963@gmail.com">Aliismii.963@gmail.com</a>
+            Email: <a href="mailto:alismi.963@gmail.com">alismi.963@gmail.com</a>
           </p>
           <p>
             When sharing or featuring ALISMI, please credit:  
@@ -835,7 +946,7 @@
     <div>
       <span class="brand">ALISMI</span> • Official Artist Website • London, United Kingdom
     </div>
-    <div style="margin-top:0.4rem;">
+    <div style="margin-top:0.6rem; font-size: 0.85rem; color: #f5f5f7;">
       Built with intention, discipline and sound — this isn’t just noise, it’s ALISMI.
     </div>
   </footer>
