@@ -7,8 +7,8 @@
 
   <!-- Primary SEO -->
   <link rel="canonical" href="https://alismi-off.github.io/" />
-  <meta name="description" content="ALISMI – Artist, Producer, Composer, Mixing Engineer, Performer, Actor. Trap, EDM, Afro, R&B, Reggaeton. Official website, music, press kit, gallery and contact." />
-  <meta name="keywords" content="ALISMI, Alireza, artist, producer, trap, EDM, afro, R&B, reggaeton, London, UAL, music production, performing arts" />
+  <meta name="description" content="ALISMI – Artist, Producer, Composer, Mixing Engineer, Performer, Actor. HipHop, EDM, Afro, R&B, Reggaeton. Official website, music, press kit, gallery and contact." />
+  <meta name="keywords" content="ALISMI, Alireza, artist, producer, HipHop, EDM, afro, R&B, reggaeton, London, UAL, music production, performing arts" />
   <meta name="author" content="ALISMI" />
 
   <!-- Open Graph -->
@@ -46,7 +46,7 @@
       "https://www.tiktok.com/@alismi.official",
       "https://music.apple.com/gb/artist/alismi/1895603612"
     ],
-    "description": "ALISMI – Artist, Producer, Composer, Mixing Engineer, Performer, Actor. Trap, EDM, Afro, R&B, Reggaeton. Based in London."
+    "description": "ALISMI – Artist, Producer, Composer, Mixing Engineer, Performer, Actor. HipHop, EDM, Afro, R&B, Reggaeton. Based in London."
   }
   </script>
 
@@ -125,8 +125,8 @@
     }
 
     .logo-mark {
-      width: 32px;
-      height: 32px;
+      width: 38px;
+      height: 38px;
       border-radius: 999px;
       border: 1px solid var(--accent-soft);
       display: flex;
@@ -431,7 +431,6 @@
     .gallery-item img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
       display: block;
       border-radius: 12px;
       transition: transform 0.5s ease;
@@ -619,6 +618,23 @@
       color: var(--text);
     }
 
+    /* --- ADDED FIXES --- */
+
+    /* Fix image cropping */
+    .hero-image img,
+    .press-item img,
+    .gallery-item img {
+      object-fit: contain !important;
+      background-color: #0b0b0d; /* Fills empty background space cleanly */
+    }
+
+    /* Hide all social/platform icons inside buttons */
+    .platform-btn img.icon {
+      display: none !important;
+    }
+
+    /* ------------------- */
+
     /* Responsive */
     @media (max-width: 900px) {
       .hero {
@@ -683,7 +699,7 @@
     <nav class="nav">
       <div class="nav-left">
         <div class="logo-mark">
-          <img src="https://alismi-off.github.io/Logo%20presentation%20(2).png" alt="ALISMI logo" style="width:28px;height:28px;object-fit:cover;">
+          <img src="https://alismi-off.github.io/Logo%20presentation%20(2).png" alt="ALISMI logo" style="height: 38px; width: auto;">
         </div>
         <div class="nav-title">ALISMI • LONDON</div>
       </div>
@@ -707,13 +723,13 @@
     <section class="section hero" id="home">
       <div class="hero-left">
         <div class="hero-tag">Aura Architecture • Official Artist Website</div>
-        <div class="hero-name"><span>ALISMI</span> / ALIREZA</div>
+        <div class="hero-name"><span>ALISMI</span></div>
 
         <div class="hero-roles">
           <strong>Artist • Producer • Composer • Mixing Engineer • Performer • Actor</strong>
         </div>
         <div class="hero-genres">
-          <strong>Trap • EDM • Afro • R&amp;B • Reggaeton</strong>
+          <strong>HipHop • EDM • Afro • R&amp;B • Reggaeton</strong>
         </div>
 
         <div class="hero-actions">
@@ -728,7 +744,7 @@
 
       <div class="hero-right">
         <div class="hero-image">
-          <img src="https://alismi-off.github.io/hf_20260414_041359_0d9d6076-cbed-4c28-8130-416cad086152.png" alt="ALISMI hero portrait" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
+          <img src="https://alismi-off.github.io/hf_20260414_041359_0d9d6076-cbed-4c28-8130-416cad086152.png" alt="ALISMI hero portrait" style="width:100%;height:100%;border-radius:12px;">
         </div>
         <div class="hero-meta">
           <span>Location: London, United Kingdom</span>
@@ -871,7 +887,7 @@
             adding visual storytelling, digital creation, and modern communication to his skillset.
           </p>
           <p>
-            ALISMI blends Trap, EDM, Afro, R&amp;B, and Reggaeton into a unique sonic identity. His music is built from experience, ambition,
+            ALISMI blends HipHop, EDM, Afro, R&amp;B, and Reggaeton into a unique sonic identity. His music is built from experience, ambition,
             and evolution. This isn’t just noise — <span>it’s ALISMI.</span>
           </p>
         </div>
